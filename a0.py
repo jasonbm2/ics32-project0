@@ -1,9 +1,14 @@
 def draw():
     blocks = int(input())
     for n in range(blocks + 1):
-        print(" " * n * 2 + "+-+")
-        print(" " * n * 2 + "  " + "| |")
-        print(" " * n * 2 + "    " + "+-", end="")
+        print("+-+")
+        if n == 0:
+            print("| |")
+            print("+-", end="")
+        else:
+            print(" " * n * 2 + "| |")
+            print(" " * n * 2 + "+-", end="")
+    print("+")
 
 def main():
     draw()
